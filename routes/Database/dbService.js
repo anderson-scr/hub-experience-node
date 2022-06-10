@@ -4,9 +4,10 @@ let instance = null
 dotenv.config()
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: process.env.DATABASE
+  host: "us-cdbr-east-05.cleardb.net",
+  user: "bca09d0d03413d",
+  database: process.env.DATABASE,
+  password: "0f53b95f"
 })
 
 class DbService {

@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-// require("./Database/server")
+require("./Database/server")
 
 router.get('/' , (req, res) => {
   res.render("experience/experienceDay")

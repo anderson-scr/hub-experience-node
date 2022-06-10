@@ -13,4 +13,4 @@
 4-Retorne para a pasta raiz do programa e execute o comando: "node index.js"
 
 # Por ultimo:
-5- Basta entra em "localhost:3004/admin"
+5- Basta entra em "localhost:3004/
