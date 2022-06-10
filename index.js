@@ -21,7 +21,7 @@ app.use(bodyParser.json())
 app.use("/admin", admin)
 
 // Outros
-const PORT = 3004
+const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
   console.log("Server started.")
 })
