@@ -6,7 +6,7 @@ dotenv.config()
 const connection = mysql.createConnection({
   host: "us-cdbr-east-05.cleardb.net",
   user: "bca09d0d03413d",
-  database: process.env.DATABASE,
+  database: "heroku_a264045fa0adcf8",
   password: "0f53b95f"
 })
 
