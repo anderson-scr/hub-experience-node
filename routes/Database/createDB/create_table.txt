@@ -1,0 +1,47 @@
+create database expday character set utf8mb4 collate utf8mb4_unicode_ci;
+
+
+create table usuario(
+	cpf varchar(14) not null primary key,
+	nome varchar(50),
+	data_nascimento date,
+	email varchar(50),
+	sexo enum("Masculino", "Feminino", "Outro"),
+	telefone varchar(11),
+  uso_informacoes boolean,
+  receber_email boolean
+);
+
+create table palestra(
+	id_palestra int not null primary key,
+	nome_sala varchar(50),
+	andar_sala varchar(20),
+    
+	nome_palestrante varchar(50),
+  sub_info_palestrante varchar(50),
+  instagram_palestrante varchar(50),
+  linkedin_palestrante varchar(50),
+  img_palestrante varchar(100),
+    
+	titulo_palestra varchar(50),
+	descricao_palestra text,
+
+	hora_palestra time,
+  data_palestra date,
+	limite_pessoa int
+);
+
+create table inscricao(
+	fk_usuario varchar(14) not null,
+	fk_palestra int not null,
+	foreign key (fk_usuario) references usuario(cpf),
+	foreign key (fk_palestra) references palestra(id_palestra)
+);
+
+
+(67) 99192-8338
+
+
+},Wk+{FS_u4H*[7Q <<< senha root
+
+@Zg%kFKhNitK  <<< senha ander

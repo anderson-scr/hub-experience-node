@@ -1,0 +1,1100 @@
+#seguraWave {
+  width: inherit;
+  position: relative;
+}
+#seguraWave {
+  position: relative;
+}
+#waves {
+  position: absolute;
+  top: -140px;
+  width: 100%;
+}
+
+
+
+
+/* Setinha da direita para scroll */
+.setinhaContainner{
+  position: absolute;
+  top: 0;
+  bottom: 150px;
+  margin: auto 0;
+  height: 120px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.setinhaContainner:hover > .linhaCima {
+  border-color: var(--ligth-orange);
+  cursor: pointer;
+}
+
+.linhaCima{
+  height: 80px;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  background-color: var(--white);
+  margin-bottom: 5px;
+  display: block;
+  transition: border-color .2s linear;
+}
+#setinha{
+  color: var(--white);
+  animation: scrolldown 3s linear infinite .5s;
+  cursor: pointer;
+}
+
+@keyframes scrolldown {
+  0%, 100%{
+      transform: translateY(20%);
+  }
+  50%{
+      transform: translateY(0%);
+  }
+}
+/* Setinha da direita para scroll */
+
+
+
+
+/* Parte da descricao e HXD animacao (BAIXO) */
+#textoLP {
+  display: flex;
+  height: 600px;
+  width: 90%;
+  margin: auto;
+  margin-top: 7%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#containnerTexto {
+  width: 55%;
+  padding-bottom: 3%;
+  /* Rato */
+}
+
+#containnerTexto > h2 {
+  color: var(--main-bg-color);
+  font-size: 40px;
+  margin-bottom: 2%;
+}
+#containnerTexto > p {
+  text-align: justify;
+  font-size: 22px;
+}
+#containnerLetrasSVG {
+  width: 30%;
+  max-height: 80%;
+  height: inherit;
+  position: relative;
+}
+.letraSVG {
+  position: absolute;
+  transition: left 1s linear, opacity 1s linear;
+  opacity: 0;
+}
+#H {
+  top: 10px;
+  left: 250px;
+}
+#X {
+  transform: scale(.8);
+  left: 0;
+  right: 40%;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+}
+#D {
+  bottom: 30px;
+  right: -250px;
+}
+/* Parte da descricao e HXD animacao (CIMA) */
+
+
+
+
+/* Titulo da sessao do card (BAIXO) */
+#sessaoDosCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#estiloTitulo {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+#estiloTitulo > h2 {
+  color: var(--main-bg-color);
+  font-size: 48px;
+  flex-grow: 2;
+}
+#estiloTitulo > div {
+  width: 30%;
+  height: 4px;
+  background-color: var(--main-bg-color);
+  flex-grow: 1;
+}
+.subTitulo {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.textoAzul {
+  font-weight: 800;
+  color: var(--ligth-orange);
+  font-size: 2.5rem;
+  margin-top: 8px;
+}
+/* Titulo da sessao do card (CIMA) */
+
+
+
+
+/* Campos que aparecem os cards (BAIXO) */
+.tituloAndar {
+  display: flex;
+  gap: 1%;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.secDeAndar:hover > .tituloAndar > div {
+  background-color: var(--blue);
+}
+.containnerDeCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+}
+/* Campos que aparecem os cards (CIMA) */
+
+
+
+
+
+
+
+
+
+
+/* Parte dos patrocinadores (BAIXO)*/
+#organizacao {
+  margin: auto;
+  margin-top: 8%;
+  width: 90%;
+  text-align: center;
+  border-bottom: 2px solid #f1f1f1;
+  transition: border-color .4s linear;
+}
+#organizacao:hover {
+  border-color: var(--ligth-orange);
+}
+#organizacao:hover > #seguraTitulo > div {
+  background-color: var(--ligth-orange);
+}
+#organizacao > #seguraTitulo > h2 {
+  color: var(--main-bg-color);
+  font-size: 3rem;
+  margin: 1%;
+  flex-grow: 1;
+}
+#seguraTitulo {
+  display: flex;
+  align-items: center;
+}
+#seguraTitulo > div {
+  height: 2px;
+  flex-grow: 3;
+  background-color: #f1f1f1;
+  transition: background-color .4s linear;
+}
+#seguraIMG {
+  display: flex;
+  margin: 2%;
+  justify-content: space-around;
+  align-items: center;
+}
+#seguraIMG > img {
+  width: 190px;
+}
+/* Parte dos patrocinadores (CIMA)*/
+
+
+
+
+
+/* Sessao dos Apoiadores (BAIXO) */
+#apoiadores {
+  width: 90%;
+  margin: auto;
+}
+#apoiadores {
+  margin: auto;
+  margin-top: 8%;
+  width: 90%;
+  text-align: center;
+  border-bottom: 2px solid #f1f1f1;
+  transition: border-color .4s linear;
+}
+#apoiadores:hover {
+  border-color: var(--ligth-orange);
+}
+#apoiadores:hover > #seguraTitulo > div {
+  background-color: var(--ligth-orange);
+}
+#apoiadores > #seguraTitulo > h2 {
+  color: var(--main-bg-color);
+  font-size: 3rem;
+  margin: 1%;
+  flex-grow: 1;
+}
+#seguraApoiadores > img {
+  width: 150px;
+}
+#seguraApoiadores {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/* Sessao dos Apoiadores (BAIXO) */
+
+
+
+
+
+
+/* Esfera */
+.linhaEsfera {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.imgApoiador {
+  width: inherit;
+  height: inherit;
+  transform: scale(.65);
+}
+#apoiador03, #apoiador04, #apoiador01 {
+  background-color: #000 !important;
+}
+.apoiador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#apoiador01 > img {
+  transform: scale(.45);
+}
+#apoiador02 > img {
+  transform: scale(.17);
+}
+.apoiador {
+  min-width: 115px;
+  max-width: 115px;
+  height: 115px;
+  border: 3px solid var(--main-bg-color);
+  border-radius: 50%;
+  transition: transform .3s linear;
+  overflow: hidden;
+}
+.apoiador:hover {
+  transform: scale(1.2);
+  border-color: var(--ligth-orange);
+}
+
+.wMini {
+  width: 42%;
+}
+.wMenor {
+  width: 62%;
+}
+.wMedia {
+  width: 73%;
+}
+.wGrande {
+  width: 83%;
+}
+/* Esfera */
+/* Sessao dos Apoiadores (CIMA) */
+
+
+/* Footer da pagina (BAIXO) */
+#footer {
+  margin: 2% 2% 0 2%;
+  text-align: center;
+  overflow: hidden;
+}
+#footer > legend {
+  margin-bottom: 10px;
+}
+.seguraCampos {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.seguraCampos > .camposFooter > img {
+  width: 80px;
+}
+.camposFooter > legend {
+  font-weight: 600;
+}
+.legendaFooter {
+  font-size: 14px;
+}
+.nomesDevs {
+  font-weight: 800;
+  color: var(--ligth-orange);
+}
+.nomesDevs a{
+  color: transparent;
+}
+#cComercial {
+  color: var(--blue);
+}
+.bi {
+  color: var(--main-bg-color);
+}
+/* Footer da pagina (CIMA) */
+
+
+
+
+/* Cubinhos que vao surgir e sumir da tela (BAIXO) */
+.cubinhosEfeitos {
+  height: 3vh;
+  width: 3vh;
+  background-color: #0c4d8525;
+  position: fixed;
+  opacity: 0;
+  transform: scale(0.1);
+  pointer-events: none;
+}
+.orange {
+  background-color: #f7951e4d;
+}
+#ce1 {
+  left: 1%;
+  bottom: 45%;
+}
+#ce2 {
+  left: 7%;
+  bottom: 62%;
+}
+#ce3 {
+  left: 15%;
+  bottom: 17%;
+}
+#ce4 {
+  left: 21%;
+  bottom: 33%;
+}
+#ce5 {
+  left: 27%;
+  bottom: 55%;
+}
+#ce6 {
+  left: 32%;
+  bottom: 40%;
+}
+#ce7 {
+  left: 40%;
+  bottom: 60%;
+}
+#ce8 {
+  left: 47%;
+  bottom: 78%;
+}
+#ce9 {
+  right: 1%;
+  bottom: 60%;
+}
+#ce10 {
+  right: 5%;
+  bottom: 15%;
+}
+#ce11 {
+  right: 13%;
+  bottom: 50%;
+}
+#ce12 {
+  right: 19%;
+  bottom: 22%;
+}
+#ce13 {
+  right: 25%;
+  bottom: 67%;
+}
+#ce14 {
+  right: 33%;
+  bottom: 60%;
+}
+#ce15 {
+  right: 40%;
+  bottom: 30%;
+}
+#ce16 {
+  right: 46%;
+  bottom: 55%;
+}
+
+
+.kf1 {
+  animation: floatQuadradinhos 7s ease-in-out infinite;
+  animation-delay: 2s;
+}
+@keyframes floatQuadradinhos {
+  0% {
+    transform: 
+      translateY(0%)
+      translateX(0%)
+      scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: 
+      translateY(-750%)
+      scale(0.8)
+      translateX(100%);
+
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+
+.kf2 {
+  animation: floatQuadradinhos2 9s ease-in-out infinite;
+}
+@keyframes floatQuadradinhos2 {
+  0% {
+    transform: 
+      translateY(0%)
+      translateX(0%)
+      scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: 
+      translateY(950%)
+      scale(1.1);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+
+.kf3 {
+  animation: floatQuadradinhos3 7.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+@keyframes floatQuadradinhos3 {
+  0% {
+    transform: 
+      translateY(0%)
+      translateX(0%)
+      scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    transform: 
+      translateX(-100%);
+  }
+  50% {
+    transform: 
+      translateY(-750%)
+      scale(0.6)
+      translateX(-50%);
+    opacity: .3; 
+  }
+  80% {
+    opacity: 1;
+  }
+}
+/* Cubinhos que vao surgir e sumir da tela (CIMA) */
+
+
+
+
+
+/* Cubinhos do footer. TETRIS (BAIXO) */
+#seguraTetris {
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+  height: 1.5vw;
+  position: relative;
+}
+.separaCubinhos {
+  position: absolute;
+  pointer-events: none;
+  overflow: visible;
+  width: 32%;
+  bottom: 0;
+}
+#separacaoMeio {
+  display: flex;
+  justify-content: space-evenly;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#separacaoEsq {
+  left: 0;
+}
+#separacaoDir {
+  right: 0;
+}
+.cubTetris {
+  background-color: var(--quadradinhos);
+  opacity: 0;
+  pointer-events: none;
+  position: inherit;
+  width: 1.5vw;
+  height: 1.5vw;
+  bottom: 0px;
+  z-index: 0;
+  transform: scale(.1);
+}
+
+
+
+/* Alturas */
+.l2 {
+  bottom: 1.5vw;
+}
+.l3 {
+  bottom: 3vw;
+}
+.l4 {
+  bottom: 4.5vw;
+}
+.l5 {
+  bottom: 6vw;
+}
+.l6 {
+  bottom: 7.5vw;
+}
+.l7 {
+  bottom: 9vw;
+}
+.l8 {
+  bottom: 10.5vw;
+}
+.l9 {
+  bottom: 12vw;
+}
+/* Alturas */
+
+
+
+/* Posicionamento cubos esquerda */
+.ce1 {
+  left: 0;
+}
+.ce2 {
+  left: 3vw;
+}
+.ce3 {
+  left: 7.5vw;
+}
+.ce4 {
+  left: 9vw;
+}
+.ce5 {
+  left: 12vw;
+}
+.ce6 {
+  right: 0;
+}
+.ce7 {
+  right: 1.5vw;
+}
+.ce8 {
+  right: 6vw;
+}
+.ce9 {
+  right: 10.5;
+}
+.ce10 {
+  right: 12vw;
+}
+.ce11 {
+  left: 1.5vw;
+}
+.ce12 {
+  left: 3vw;
+}
+.ce13 {
+  left: 0;
+}
+.ce14 {
+  left: 4.5vw;
+}
+.ce15 {
+  left: 6vw;
+}
+.ce16 {
+  left: 7.5vw;
+}
+.ce17 {
+  left: 3.7vw;
+}
+.ce18 {
+  left: 2.5vw;
+}
+.ce19 {
+  left: 0vw;
+}
+.ce20 {
+  left: 5vw;
+}
+.ce21 {
+  left: 4.5vw;
+}
+.ce22 {
+  left: 1.5vw;
+}
+.ce23 {
+  left: 1.5vw;
+}
+.ce24 {
+  left: 3vw;
+}
+.ce25 {
+  left: 0vw;
+}
+.ce26 {
+  left: 7vw;
+}
+.ce27 {
+  left: 13.5vw;
+}
+.ce28 {
+  left: 15vw;
+}
+/* Posicionamento cubos esquerda */
+
+
+/* Posicionamento cubos meio */
+.cm1 {
+  left: 0;
+}
+.cm2 {
+  left: 3vw;
+}
+.cm3 {
+  left: 7.5vw;
+}
+.cm4 {
+  left: 9vw;
+}
+.cm5 {
+  left: 12vw;
+}
+.cm6 {
+  right: 0;
+}
+.cm7 {
+  right: 1.5vw;
+}
+.cm8 {
+  right: 6vw;
+}
+.cm9 {
+  right: 10.5;
+}
+.cm10 {
+  right: 12vw;
+}
+/* Posicionamento cubos meio */
+
+
+
+/* Posicionamento cubos direita */
+.cd1 {
+  right: 0vw;
+}
+.cd2 {
+  right: 3vw;
+}
+.cd3 {
+  right: 7.5vw;
+}
+.cd4 {
+  right: 9vw;
+}
+.cd5 {
+  right: 12vw;
+}
+.cd6 {
+  left: 7.8vw;
+}
+.cd7 {
+  right: 4.5vw;
+}
+.cd8 {
+  left: 6vw;
+}
+.cd9 {
+  left: 10.5;
+}
+.cd10 {
+  left: 12vw;
+}
+.cd11 {
+  right: 1.5vw;
+}
+.cd12 {
+  right: 3vw;
+}
+.cd13 {
+  right: 0;
+}
+.cd14 {
+  right: 4.5vw;
+}
+.cd15 {
+  right: 6vw;
+}
+.cd16 {
+  right: 7.5vw;
+}
+.cd17 {
+  right: 4.5vw;
+}
+.cd18 {
+  right: 1.5vw;
+}
+.cd19 {
+  right: 0vw;
+}
+.cd20 {
+  right: 6vw;
+}
+.cd21 {
+  right: 4.5vw;
+}
+.cd22 {
+  right: 1.5vw;
+}
+.cd23 {
+  right: 1vw;
+}
+.cd24 {
+  right: 1.5vw;
+}
+.cd25 {
+  right: 3vw;
+}
+.cd26 {
+  right: 0vw;
+}
+.cd27 {
+  right: 14vw;
+}
+.cd28 {
+  right: 3vw;
+}
+.cd29 {
+  right: 10.5vw;
+}
+.cd30 {
+  right: 0vw;
+}
+.cd31 {
+  right: 0vw;
+}
+#linhaBase {
+  width: 100%;
+  height: 1.5vw;
+  background-color: var(--quadradinhos);
+}
+/* Posicionamento cubos direita */
+
+
+/* Altura dos cubos */
+.a1 {
+  transition: transform 10s ease-in-out,
+                opacity 3s ease-in-out,
+                scale 10s linear; 
+  transform: translateY(-250vh);
+}
+
+.a2 {
+  transition: transform 6s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-150vh);
+}
+
+.a3 {
+  transition: transform 3s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-90vh);
+}
+
+.a4 {
+  transition: transform 10s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-230vh);
+}
+
+.a5 {
+  transition: transform 3s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-70vh);
+}
+
+.a6 {
+  transition: transform 1s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-40vh);
+}
+
+.a7 {
+  transition: transform 6s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-130vh);
+}
+
+.a8 {
+  transition: transform 8s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-160vh);
+}
+
+.a9 {
+  transition: transform 1s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-20vh);
+}
+
+.a10 {
+  transition: transform 8s ease-in, 
+                opacity 3s ease-in-out;
+  transform: translateY(-190vh);
+}
+/* Altura dos cubos */
+/* Cubinhos do footer. TETRIS (CIMA) */
+
+
+
+
+
+
+
+/* Parte responsavel pela responsividade do SITE */
+/* Waves */
+@media(max-width: 770px) {
+  #waves {
+    top: -40px;
+  }
+}
+/* Waves */
+
+
+
+
+
+/* Texto */
+@media (max-width: 1550px){
+  #containnerTexto > h2 {
+    font-size: 32px;
+    margin-top: 0;
+  }
+  #containnerTexto > p {
+    font-size: 18px;
+  }
+  #H, #X, #D {
+    transform: scale(.7);
+  }
+}
+@media (max-width: 1000px){
+  #textoLP {
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+  #containnerLetrasSVG {
+    min-width: 60%;
+    min-height: 50%;
+    margin-right: 12%;
+  }
+}
+@media (max-width: 750px) {
+  #containnerTexto {
+    width: 80%;
+  }
+  #containnerTexto > h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  #containnerTexto > p {
+    font-size: 14px;
+  }
+  #H, #X, #D {
+    transform: scale(.4);
+  }
+  #estiloTitulo > h2 {
+    font-size: 36px;
+  }
+  .subTitulo {
+    font-size: 20px;
+  }
+}
+/* Texto */
+
+
+
+
+
+/* cards */
+@media (max-width: 1100px) {
+  .containnerDeCards {
+    gap: 20px;
+  }
+}
+/* cards */
+
+
+
+
+
+/* Esferas */
+@media (max-width: 1000px) {
+  .apoiador {
+    transform: scale(.75);
+  }
+  .linhaEsfera {
+    margin-bottom: 0;
+  }
+  .wMini {
+    width: 42%;
+  }
+  .wMenor {
+    width: 72%;
+  }
+  .wMedia {
+    width: 83%;
+  }
+  .wGrande {
+    width: 96%;
+  }
+}
+@media (max-width: 650px) {
+  .apoiador {
+    transform: scale(.65);
+  }
+  .linhaEsfera {
+    margin-bottom: 0;
+  }
+  .wMini {
+    width: 42%;
+  }
+  .wMenor {
+    width: 72%;
+  }
+  .wMedia {
+    width: 83%;
+  }
+  .wGrande {
+    width: 100%;
+  }
+}
+/* Esferas */
+
+
+
+
+
+/* Imgs organizadores */
+@media (max-width: 770px) {
+  #seguraIMG > img {
+    width: 120px;
+  }
+}
+@media (max-width: 470px) {
+  #seguraIMG > img {
+    width: 60px;
+  }
+  #tituloOrganizacao, #tituloApoiadores, #tituloInsCon {
+    font-size: 32px !important;
+  }
+  .subTitulo {
+    font-size: 14px;
+  }
+  .seguraCampos {
+    width: 90%;
+    justify-content: space-between;
+  }
+  .camposFooter > legend {
+    font-size: 16px;
+  }
+  .camposFooter > img {
+    width: 60px !important;
+  }
+  .linhaEsfera {
+    margin-bottom: 0;
+  }
+  .apoiador {
+    min-width: 80px !important;
+  }
+  #containnerLetrasSVG {
+    margin-right: 160px !important;
+  }
+  .setinhaContainner {
+    display: none;
+  }
+  #campoAzul {
+    align-items: flex-start !important;
+  }
+  #campoDo3D {
+    transform: scale(.5);
+  }
+  #campoDo3D {
+    padding-right: 77% !important;
+  }
+  .text {
+    padding: 0 !important;
+    width: 340px !important;
+  }
+  .textImpact {
+    margin: 0 !important;
+  }
+  .textImpact > h2 {
+    font-size: 22px !important;
+  }
+  #cristoSenhor {
+    font-size: 24px !important;
+  }
+  #cristoSenhor2 {
+    font-size: 28px !important;
+  }
+  #containnerTeste {
+    overflow: hidden;
+  }
+}
+/* Imgs organizadores */
+/* Parte responsavel pela responsividade do SITE */

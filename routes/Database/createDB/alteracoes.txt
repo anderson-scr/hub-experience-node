@@ -1,0 +1,16 @@
+UPDATE palestra SET img_palestrante = "Palco sobre carreira" where id_palestra = 20
+UPDATE palestra SET img_palestra = "./Assets/Imgs/Palestrantes/pessoa17.png" where id_palestra = 16
+
+
+UPDATE palestra SET nome_palestrante = "Lariane Monari" where id_palestra = 18;
+UPDATE palestra SET nome_palestrante = "Heloisa Fitz Reinaldo S." where id_palestra = 16;
+UPDATE palestra SET nome_palestrante = "Karoline R. Bianca Rodri." where id_palestra = 21;
+UPDATE palestra SET nome_palestrante = "Joabe Guimarães Q." where id_palestra = 24;
+UPDATE palestra SET img_palestrante = "./Assets/Imgs/Palestrantes/pessoa24.png" where id_palestra = 22;
+
+UPDATE palestra set img_palestrante = "./Assets/Imgs/Palestrantes/pessoa03.png" where id_palestra = 03;
+UPDATE palestra set img_palestrante = "./Assets/Imgs/Palestrantes/pessoa25.png" where id_palestra = 23;
+UPDATE palestra set img_palestrante = "./Assets/Imgs/Palestrantes/pessoa28.png" where id_palestra = 25;
+
+UPDATE palestra set nome_palestrante = 'Daniel "Apollo" Giovani "Crasher"' where id_palestra = 23;
+UPDATE palestra set nome_palestrante = 'Ana Valéria Sandra Demetrio' where id_palestra = 03;

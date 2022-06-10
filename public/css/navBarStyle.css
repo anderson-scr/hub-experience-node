@@ -1,0 +1,91 @@
+#header {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+  width: 100%;
+  z-index: 10;
+  height: 4%;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  border-bottom : 1px solid rgba(255, 255, 255, 0.07);
+}
+#header button {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.1rem;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color .4s linear;
+}
+#header button::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  width: 0px;
+  height: 2px;
+  background-color: var(--ligth-orange);
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: width .15s linear;
+}
+#header button:hover {
+  cursor: pointer;
+}
+#header button:hover::after {
+  width: 100%;
+}
+#header .navigationBar {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu{
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+.iconeMenu {
+  display: none;
+  color: var(--white);
+}
+/* Menu (CIMA) */
+
+
+
+
+/* Menu responsivo (BAIXO) */
+@media (max-width: 940px){
+  #header > nav{
+    display: flex;
+    justify-content: space-around;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  #header {
+    padding-left: 15px !important;
+    width: 100%;
+  }
+  .menu {
+    gap: 40px;
+    width: 100%;
+  }
+  .menu > button {
+    font-size: 12px !important;
+  }
+  #header button::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+  }
+}
+/* Menu responsivo */

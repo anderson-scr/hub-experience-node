@@ -1,0 +1,44 @@
+#containnerCardizao {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 3%;
+  height: 70vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#containnerImgLista {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#containnerImagemCardizao {
+  width: 30%;
+  height: 100%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#containnerListaCardizao {
+  width: 70%;
+  height: 100%;
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.informacoes {
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid pink;
+}
+
+
+
