@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  fetch("http://localhost:5005/getAll")
+  fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll")
 
     .then(response => response.json())
     .then(data => createCard(data))
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function createCard(infoCard) {
   // console.log(infoCard)
   for (let card of infoCard["data"]) {
-    fetch("http://localhost:5005/getQntInscricao/" + card["id_palestra"])
+    fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll" + card["id_palestra"])
       .then(response => response.json())
       .then(data => {
         card["qntInscrito"] = data["data"][0]["count(*)"]

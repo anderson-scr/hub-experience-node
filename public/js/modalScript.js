@@ -2,7 +2,7 @@ function openModal(evt) {
   console.log(evt.target.className)
   const idPalestrante = evt.target.className
 
-  fetch("http://localhost:5005/getPalestra/" + idPalestrante)
+  fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll" + idPalestrante)
     .then(response => response.json())
     .then(data => createModal(data))
 }
@@ -369,7 +369,7 @@ class Modal {
 
 
 
-    fetch("http://localhost:5005/getInscricao/" + respostas["iptCpf"])
+    fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll" + respostas["iptCpf"])
       .then(response => response.json())
       .then(data => { this.updataOuInsere(data, respostas["iptCpf"], respostas["id_palestra"], respostas)})
       
@@ -384,7 +384,7 @@ class Modal {
 
     if(info["data"].length > 0) {
       console.log("Tenho cadastro")
-      fetch("http://localhost:5005/update", {
+      fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll", {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json'
@@ -400,7 +400,7 @@ class Modal {
       console.log(containnerModalzinho)
     } else {
       console.log("Nao tenho cadastro")
-      fetch("http://localhost:5005/insert", {
+      fetch("http://us-cdbr-east-05.cleardb.net:5005/getAll", {
         headers: {
           'Content-type': 'application/json'
         },
