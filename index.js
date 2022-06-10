@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 
 
 // Rotas
-app.use("/admin", admin)
+app.use("/", admin)
 
 // Outros
 const PORT = process.env.PORT || 3004
