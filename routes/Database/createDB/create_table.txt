@@ -45,3 +45,7 @@ create table inscricao(
 },Wk+{FS_u4H*[7Q <<< senha root
 
 @Zg%kFKhNitK  <<< senha ander
+
+
+
+// mysql://bca09d0d03413d:0f53b95f@us-cdbr-east-05.cleardb.net/heroku_a264045fa0adcf8?reconnect=true

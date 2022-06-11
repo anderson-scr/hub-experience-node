@@ -4,10 +4,17 @@ let instance = null
 dotenv.config()
 
 const connection = mysql.createConnection({
-  host: "us-cdbr-east-05.cleardb.net",
-  user: "bca09d0d03413d",
-  database: "heroku_a264045fa0adcf8",
-  password: "0f53b95f"
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE
+})
+
+connection.query("SELECT * FROM palestra", (err, res) => {
+  if(err) {
+    console.log(err)
+  }
+  console.log(res)
 })
 
 class DbService {

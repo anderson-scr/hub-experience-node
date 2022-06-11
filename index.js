@@ -23,5 +23,5 @@ app.use("/", admin)
 // Outros
 const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
-  console.log("Server started.")
+  console.log(`Server started on port localhost/${PORT}.`)
 })

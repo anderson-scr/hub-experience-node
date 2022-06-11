@@ -2,7 +2,7 @@ function openModal(evt) {
   console.log(evt.target.className)
   const idPalestrante = evt.target.className
 
-  fetch(`http://us-cdbr-east-05.cleardb.net:${process.env.PORT || 5005}/getAll` + idPalestrante)
+  fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll` + idPalestrante)
     .then(response => response.json())
     .then(data => createModal(data))
 }
@@ -369,7 +369,7 @@ class Modal {
 
 
 
-    fetch(`http://us-cdbr-east-05.cleardb.net:${process.env.PORT || 5005}/getAll` + respostas["iptCpf"])
+    fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll` + respostas["iptCpf"])
       .then(response => response.json())
       .then(data => { this.updataOuInsere(data, respostas["iptCpf"], respostas["id_palestra"], respostas)})
       
@@ -384,7 +384,7 @@ class Modal {
 
     if(info["data"].length > 0) {
       console.log("Tenho cadastro")
-      fetch(`http://us-cdbr-east-05.cleardb.net:${process.env.PORT || 5005}/getAll`, {
+      fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json'
@@ -400,7 +400,7 @@ class Modal {
       console.log(containnerModalzinho)
     } else {
       console.log("Nao tenho cadastro")
-      fetch(`http://us-cdbr-east-05.cleardb.net:${process.env.PORT || 5005}/getAll`, {
+      fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll`, {
         headers: {
           'Content-type': 'application/json'
         },
