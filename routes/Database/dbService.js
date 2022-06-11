@@ -10,12 +10,12 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE
 })
 
-connection.query("SELECT * FROM palestra", (err, res) => {
-  if(err) {
-    console.log(err)
-  }
-  console.log(res)
-})
+// connection.query("SELECT * FROM palestra", (err, res) => {
+//   if(err) {
+//     console.log(err)
+//   }
+//   console.log(res)
+// })
 
 class DbService {
   static getDbServiceInstance() {

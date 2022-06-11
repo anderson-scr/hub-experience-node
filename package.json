@@ -4,6 +4,7 @@
   "description": "Hub Experience Day",
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "start:dev": "nodemon index.js",
     "start:db": "nodemon ./routes/Database/server.js"
   },

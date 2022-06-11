@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}))
 
 
 app.get('/getAll', (request, response) => {
+  console.log("entro getAll")
   const classeBanco = new dbService.DbService()
   const resultado = classeBanco.queryTodosCards()
   // console.log(resultado)
@@ -92,4 +93,4 @@ app.patch('/update', (request, response) => {
 }) 
 
 
-app.listen(process.env.PORT, () => console.log("Database is running"))
+app.listen(process.env.PORT, () => console.log(`Database is running on port ${process.env.PORT}`))
