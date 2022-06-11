@@ -93,4 +93,4 @@ app.patch('/update', (request, response) => {
 }) 
 
 
-app.listen(process.env.PORT, () => console.log(`Database is running on port ${process.env.PORT}`))
+app.listen(5005, () => console.log(`Database is running on port ${process.env.PORT}`))

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll`)
     .then(response => response.json())
     .then(data => createCard(data))
-    .catch(err => console.log(err))
   })
 
 function createCard(infoCard) {
