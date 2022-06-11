@@ -7,7 +7,8 @@ const connection = mysql.createConnection({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
-  database: process.env.DATABASE
+  database: process.env.DATABASE,
+  ssl_disabled: True
 })
 
 // connection.query("SELECT * FROM palestra", (err, res) => {
