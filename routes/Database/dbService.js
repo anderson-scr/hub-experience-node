@@ -9,11 +9,11 @@ const connection = mysql.createConnection({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-  ssl: {
-    key: fs.readFileSync(__dirname + '/certs/key.pem'),
-    cert: fs.readFileSync(__dirname + '/certs/cert.pem')
-}
+  database: process.env.DATABASE
+//   ssl: {
+//     key: fs.readFileSync(__dirname + '/certs/key.pem'),
+//     cert: fs.readFileSync(__dirname + '/certs/cert.pem')
+// }
 })
 
 // connection.query("SELECT * FROM palestra", (err, res) => {
