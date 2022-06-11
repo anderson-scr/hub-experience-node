@@ -4,15 +4,11 @@ const dotenv = require("dotenv")
 let instance = null
 dotenv.config()
 
-
-
 const connection = mysql.createConnection({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-  sslverify: true,
-  sslca: "./certs/rds-combined-ca-bundle.pem"
+  database: process.env.DATABASE
 })
 
 // connection.query("SELECT * FROM palestra", (err, res) => {
