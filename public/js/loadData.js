@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll`)
+  fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll`)
     .then(response => response.json())
     .then(data => createCard(data))
 })
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function createCard(infoCard) {
   // console.log(infoCard)
   for (let card of infoCard["data"]) {
-    fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll` + card["id_palestra"])
+    fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll` + card["id_palestra"])
       .then(response => response.json())
       .then(data => {
         card["qntInscrito"] = data["data"][0]["count(*)"]
