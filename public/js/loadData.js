@@ -1,20 +1,20 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll`)
-//     .then(response => response.json())
-//     .then(data => createCard(data))
-//   })
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("carrego o DOM")
+  const imgCard = document.querySelector(`#fade3`)
+  console.log(imgCard)
+})
 
-function createCard(infoCard) {
-  // console.log(infoCard)
-  for (let card of infoCard["data"]) {
-    fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll` + card["id_palestra"])
-      .then(response => response.json())
-      .then(data => {
-        card["qntInscrito"] = data["data"][0]["count(*)"]
-        new Cardi(card)
-      })  
-  }
-}
+// function createCard(infoCard) {
+//   // console.log(infoCard)
+//   for (let card of infoCard["data"]) {
+//     fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll` + card["id_palestra"])
+//       .then(response => response.json())
+//       .then(data => {
+//         card["qntInscrito"] = data["data"][0]["count(*)"]
+//         new Cardi(card)
+//       })  
+//   }
+// }
 
 
 class Cardi {

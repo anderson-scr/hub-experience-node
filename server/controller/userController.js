@@ -13,7 +13,7 @@ exports.loadCards = (req, res) => {
     if(err) throw err; //Erro na conexcao
     console.log(`Connected as ID ${connection.threadId}.`) //Conexcao funcionou
     
-    const pesquisa = "SELECT * FROM palestra LIMIT 40 OFFSET 2"
+    const pesquisa = "SELECT * FROM palestra LIMIT 40 OFFSET 1"
     connection.execute(pesquisa, (err, cards) => {
       connection.release()
 
@@ -25,6 +25,7 @@ exports.loadCards = (req, res) => {
     })
   })
 }
+
 
 exports.loadBigCard = (req, res) => {
   pool.getConnection((err, connection) => {
