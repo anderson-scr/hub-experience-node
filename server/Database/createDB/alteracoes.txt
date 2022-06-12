@@ -14,3 +14,34 @@ UPDATE palestra set img_palestrante = "./Assets/Imgs/Palestrantes/pessoa28.png" 
 
 UPDATE palestra set nome_palestrante = 'Daniel "Apollo" Giovani "Crasher"' where id_palestra = 23;
 UPDATE palestra set nome_palestrante = 'Ana Valéria Sandra Demetrio' where id_palestra = 03;
+
+
+
+
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa01.png" where id_palestra = 1;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa02.png" where id_palestra = 2;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa03.png" where id_palestra = 3;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa04.png" where id_palestra = 4;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa05.png" where id_palestra = 5;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa06.png" where id_palestra = 6;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa07.png" where id_palestra = 7;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa08.png" where id_palestra = 8;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa09.png" where id_palestra = 9;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa10.png" where id_palestra = 10;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa11.png" where id_palestra = 11;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa12.png" where id_palestra = 12;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa13.png" where id_palestra = 13;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa14.png" where id_palestra = 14;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa15.png" where id_palestra = 15;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa16.png" where id_palestra = 16;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa17.png" where id_palestra = 17;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa18.png" where id_palestra = 18;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa19.png" where id_palestra = 19;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa20.png" where id_palestra = 20;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa21.png" where id_palestra = 21;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa22.png" where id_palestra = 22;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa23.png" where id_palestra = 23;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa24.png" where id_palestra = 24;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa25.png" where id_palestra = 25;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa26.png" where id_palestra = 26;
+UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa27.png" where id_palestra = 27;
