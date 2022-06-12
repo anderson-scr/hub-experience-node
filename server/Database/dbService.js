@@ -1,5 +1,6 @@
 const mysql = require("mysql2")
 const dotenv = require("dotenv")
+const fs = require("fs")
 
 let instance = null
 dotenv.config()
@@ -9,12 +10,12 @@ const connection = mysql.createConnection({
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
-  ssl : {
-    ca : fs.readFileSync(__dirname + '/certs/rds-combined-ca-bundle.pem'),
-    rejectUnauthorized: false
-  }
 })
 
+// ssl : {
+//   ca : fs.readFileSync(__dirname + '/certs/rds-combined-ca-bundle.pem'),
+//   rejectUnauthorized: false
+// }
 connection.query("SELECT * FROM palestra", (err, res) => {
   if(err) {
     console.log(err)

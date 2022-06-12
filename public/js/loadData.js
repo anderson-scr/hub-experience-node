@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll`)
-    .then(response => response.json())
-    .then(data => createCard(data))
-  })
+// document.addEventListener("DOMContentLoaded", () => {
+//   fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll`)
+//     .then(response => response.json())
+//     .then(data => createCard(data))
+//   })
 
 function createCard(infoCard) {
   // console.log(infoCard)

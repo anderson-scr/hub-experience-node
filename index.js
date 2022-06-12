@@ -3,8 +3,11 @@ const express = require("express")
 const handlebars = require("express-handlebars")
 const bodyParser = require("body-parser")
 const app = express()
-const admin = require("./routes/admin")
 const path = require("path")
+const mysql = require("mysql2")
+const dotenv = require("dotenv")
+dotenv.config()
+
 
 
 // Configuracao
@@ -18,8 +21,26 @@ app.use(bodyParser.json())
   app.use(express.static(path.join(__dirname, "/public")))
 
 
-// Rotas
-app.use("/", admin)
+
+// Banco
+const pool = mysql.createPool({
+  connectionLimit:  200,
+  host:             process.env.HOST,
+  user:             process.env.USER,
+  password:         process.env.PASSWORD,
+  database:         process.env.DATABASE
+})
+pool.getConnection((err, connection) => {
+  if(err) throw err; //Erro na conexcao
+
+  console.log(`Connected as ID ${connection.threadId}.`) //Conexcao funcionou
+})
+const routes = require("./server/routes/user")
+app.use('/', routes)
+
+
+
+
 
 // Outros
 const PORT = process.env.PORT || 3004
