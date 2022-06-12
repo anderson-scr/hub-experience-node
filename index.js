@@ -142,6 +142,40 @@ app.patch("/atualizaCadastro", (req, res) => {
 })
 
 
+app.get('/getAllCards', (request, response) => {
+  const resultado = new Promise((resolve, reject) => {
+    const pesquisa = "SELECT * FROM palestra LIMIT 40 OFFSET 1"
+
+    pool.execute(pesquisa, (err, results) => {
+        // Retorna o erro com a query se der alguma coisa
+        if(err) reject(new Error(err.message))
+        resolve(results)
+      }
+    )
+  })
+  resultado
+    .then(data => response.json({ data: data }))
+})
+
+
+app.get("/getQntInscricao/:idBuscaPalestra", (request, response) => {
+  const { idBuscaPalestra } = request.params
+
+  const resultado = new Promise((resolve, reject) => {
+    const pesquisa = "select count(fk_palestra) as qnt_inscricao from inscricao where fk_palestra = ?"
+
+    pool.execute(pesquisa, [idBuscaPalestra], (err, results) => {
+        // Retorna o erro com a query se der alguma coisa
+        if(err) reject(new Error(err.message))
+        resolve(results)
+      }
+    )
+  })
+  resultado
+    .then(data => response.json({ data: data }))
+})
+
+
 // Outros
 const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
