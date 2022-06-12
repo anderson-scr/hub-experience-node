@@ -18,7 +18,7 @@ class Modal {
     <div id="gradient">
       <div class="modal_content">
         <div class="containnerSetinha" id="containnerSetinhaCima">
-          <img src="./Assets/Svgs/arrow-down.svg" alt="Seta cima" id="setinhaCima" class="seta">
+          <img src="/assets/Svgs/arrow-down.svg" alt="Seta cima" id="setinhaCima" class="seta">
         </div>
         
         <!-- Parte direita do modal -->
@@ -27,8 +27,8 @@ class Modal {
             <h2>${this.infoCard["nome_palestrante"]}</h2>
             <p>${this.infoCard["sub_info_palestrante"]}</p>
             <div id="containnerSocial">
-              <img src="./Assets/Svgs/instagram.svg" alt="Icone instragram">
-              <img src="./Assets/Svgs/linkedin.svg" alt="Icone Linkedin">
+              <img src="/assets/Svgs/instagram.svg" alt="Icone instragram">
+              <img src="/assets/Svgs/linkedin.svg" alt="Icone Linkedin">
             </div>
             <img src="./${this.infoCard["img_palestrante"]}" class="imgModal" alt="Foto palestrante">
           </div>
@@ -68,9 +68,6 @@ class Modal {
   
   
           <!-- campo cpf -->
-          <script type="text/javascript">
-            $("#iptCpf").mask("000.000.000-00");
-          </script>
           <div class="espaco">
             <div class="wrapper">
               <div class="input-data">
@@ -182,7 +179,7 @@ class Modal {
         <!-- Parte do form do modal -->
   
         <div class="containnerSetinha" id="containnerSetinhaBaixo">
-          <img src="./Assets/Svgs/arrow-down.svg" alt="Seta baixo" id="setinhaBaixo" class="seta">
+          <img src="/assets/Svgs/arrow-down.svg" alt="Seta baixo" id="setinhaBaixo" class="seta">
         </div>
   
       </div>
@@ -303,21 +300,23 @@ class Modal {
       iptEmail: document.querySelector("#iptEmail").value,
       selectSexo: document.querySelector("#selectSexo").value,
       iptTelefone: document.querySelector("#iptTelefone").value,
-      checkUsoInfo: document.querySelector("#check1").value,
-      checkRecebeEmail: document.querySelector("#check1").value,
+      checkUsoInfo: document.querySelector("#check1").checked,
+      checkRecebeEmail: document.querySelector("#check1").checked,
       id_palestra: this.infoCard["id_palestra"]
     }
-    const legends = [document.querySelector("#alertaPreencheriptNome"), 
+    const legends = [
+                      document.querySelector("#alertaPreencheriptNome"), 
                       document.querySelector("#alertaPreencheriptCpf"), 
                       document.querySelector("#alertaPreencheriptNasc"),
                       document.querySelector("#alertaPreencheriptEmail"),
                       document.querySelector("#alertaPreencherselectSexo"),
                       document.querySelector("#alertaPreencheriptTelefone"),
-                      document.querySelector("#alertaPreencherCheck") ]
-    
+                      document.querySelector("#alertaPreencherCheck") 
+                    ]
+
+
     legends.forEach(valor => valor.style.visibility  = "hidden")
 
-    
     console.log(respostas)
     if(respostas["iptNome"] === '') {
       document.querySelector("#alertaPreencheriptNome").style.visibility = "visible"
@@ -365,50 +364,64 @@ class Modal {
     }
 
 
-
-    fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll` + respostas["iptCpf"])
+    const idCpf = respostas["iptCpf"]
+    fetch(`/getCpfInscricao/` + idCpf, { method: "GET" })
       .then(response => response.json())
-      .then(data => { this.updataOuInsere(data, respostas["iptCpf"], respostas["id_palestra"], respostas)})
-      
-      
-     
-
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-
+      .then(data => { this.updataOuInsere(data, respostas)})
   }
-  updataOuInsere(info, cpf, palestra, todasRespostas) {
+
+  updataOuInsere(info, todasRespostas) {
 
     if(info["data"].length > 0) {
       console.log("Tenho cadastro")
-      fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll`, {
+
+      fetch(`/atualizaCadastro`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json'
         },
         body: JSON.stringify({
-          cpf: cpf,
-          palestra: palestra
+          cpf: todasRespostas["iptCpf"],
+          palestra: todasRespostas["id_palestra"]
         })
       })
 
       const containnerModalzinho = document.querySelector("#containnerModalUnico")
       containnerModalzinho.innerHTML = this.segundoModal
       console.log(containnerModalzinho)
+
     } else {
       console.log("Nao tenho cadastro")
-      fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll`, {
+      console.log(todasRespostas)
+
+      fetch(`/novoCadastro`, {
         headers: {
           'Content-type': 'application/json'
         },
         method: 'POST',
         body: JSON.stringify(todasRespostas)
       })
-        
+
+      .then('', this.insereInscricao(todasRespostas["iptCpf"], todasRespostas["id_palestra"]))
+
+
       this.trocarPalestra = `Voce esta cadastrado(a) em ${this.infoCard["titulo_palestra"]}.`
-        const containnerModalzinho = document.querySelector("#containnerModalUnico")
-        containnerModalzinho.innerHTML = this.segundoModal
+      const containnerModalzinho = document.querySelector("#containnerModalUnico")
+      containnerModalzinho.innerHTML = this.segundoModal
       }
+  }
+
+  insereInscricao(cpf, idPale) {
+    fetch('/insereInscricao', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        cpf: cpf,
+        palestra: idPale
+      })
+    })
   }
 
 

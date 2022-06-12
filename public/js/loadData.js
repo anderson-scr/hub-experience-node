@@ -1,21 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const imgCard = document.querySelectorAll(`#fade3, #fade21, #fade23`)
-  console.log(imgCard)
-})
-
-// function createCard(infoCard) {
-//   // console.log(infoCard)
-//   for (let card of infoCard["data"]) {
-//     fetch(`https://exbodcemtop76rnz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/getAll` + card["id_palestra"])
-//       .then(response => response.json())
-//       .then(data => {
-//         card["qntInscrito"] = data["data"][0]["count(*)"]
-//         new Cardi(card)
-//       })  
-//   }
-// }
-
-
 class Cardi {
   constructor(infoCard) {
     this.infoCard = infoCard

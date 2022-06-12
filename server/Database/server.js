@@ -12,7 +12,6 @@ app.use(express.urlencoded({extended: false}))
 
 
 app.get('/', (request, response) => {
-  console.log("entro getAll sem getAll")
   const classeBanco = new dbService.DbService()
   const resultado = classeBanco.queryTodosCards()
   // console.log(resultado)

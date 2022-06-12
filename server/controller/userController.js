@@ -9,6 +9,7 @@ const pool = mysql.createPool({
 
 
 exports.loadCards = (req, res) => {
+
   pool.getConnection((err, connection) => {
     if(err) throw err; //Erro na conexcao
     console.log(`Connected as ID ${connection.threadId}.`) //Conexcao funcionou
