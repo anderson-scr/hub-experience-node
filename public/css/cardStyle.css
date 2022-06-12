@@ -359,44 +359,44 @@
 
 @keyframes fadeImage3 {
   0% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa03.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa03.png);
   }
   50% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa04.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa04.png);
   }
 }
 
 
 @keyframes fadeImage21 {
   0% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa22.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa22.png);
   }
   50% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa23.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa23.png);
   }
 }
 
 @keyframes fadeImage23 {
   0% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa25.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa25.png);
   }
   50% {
-    background-image: url(../../Assets/Imgs/Palestrantes/pessoa26.png);
+    background-image: url(/assets/Imgs/Palestrantes/pessoa26.png);
   }
 }
 
 #fade3 {
-  background-image: url(../../Assets/Imgs/Palestrantes/pessoa03.png);
+  background-image: url(/assets/Imgs/Palestrantes/pessoa03.png);
   animation: fadeImage3 7s infinite;
 }
 
 #fade21 {
-  background-image: url(../../Assets/Imgs/Palestrantes/pessoa22.png);
+  background-image: url(/assets/Imgs/Palestrantes/pessoa22.png);
   animation: fadeImage21 7s infinite;
 }
 
 #fade23 {
-  background-image: url(../../Assets/Imgs/Palestrantes/pessoa25.png);
+  background-image: url(/assets/Imgs/Palestrantes/pessoa25.png);
   animation: fadeImage23 7s infinite;
 }
 
