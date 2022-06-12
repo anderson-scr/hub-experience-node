@@ -142,6 +142,27 @@ app.patch("/atualizaCadastro", (req, res) => {
 })
 
 
+// Querys banco de dados
+app.get('/getQntInscricoes/:idPalestra', (request, response) => {
+  const { idPalestra } = request.params
+
+  const resultado = new Promise((resolve, reject) => {
+    const pesquisa = "SELECT count(fk_palestra) as qnt_inscricoes FROM inscricao WHERE fk_palestra = ?"
+
+    pool.execute(pesquisa, [idPalestra], (err, results) => {
+        // Retorna o erro com a query se der alguma coisa
+        if(err) reject(new Error(err.message))
+        resolve(results)
+      }
+    )      
+  })
+
+  resultado
+    .then(data => response.json({ data: data }))
+    .catch(erro => console.log(erro))
+})
+
+
 // Outros
 const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {

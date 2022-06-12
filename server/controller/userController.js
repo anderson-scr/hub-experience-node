@@ -14,7 +14,7 @@ exports.loadCards = (req, res) => {
     if(err) throw err; //Erro na conexcao
     console.log(`Connected as ID ${connection.threadId}.`) //Conexcao funcionou
     
-    const pesquisa = "SELECT * FROM palestra LIMIT 40 OFFSET 1"
+    const pesquisa = "SELECT *, (SELECT count(fk_palestra) FROM inscricao WHERE fk_palestra = palestra.id_palestra) AS total FROM palestra WHERE id_palestra > 1"
     connection.execute(pesquisa, (err, cards) => {
       connection.release()
 
