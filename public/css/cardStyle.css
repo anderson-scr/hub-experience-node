@@ -385,19 +385,29 @@
   }
 }
 
-
-
-
-.img3 {
+#fade3 {
   background-image: url(../../Assets/Imgs/Palestrantes/pessoa03.png);
+  animation: fadeImage3 7s infinite;
 }
 
-
-.img23 {
-  background-image: url(../../Assets/Imgs/Palestrantes/pessoa25.png);
-}
-
-
-.img21 {
+#fade21 {
   background-image: url(../../Assets/Imgs/Palestrantes/pessoa22.png);
+  animation: fadeImage21 7s infinite;
+}
+
+#fade23 {
+  background-image: url(../../Assets/Imgs/Palestrantes/pessoa25.png);
+  animation: fadeImage23 7s infinite;
+}
+
+
+
+.h3 {
+  display: none;
+}
+.h21 {
+  display: none;
+}
+.h23 {
+  display: none;
 }

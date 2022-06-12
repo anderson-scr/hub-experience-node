@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("carrego o DOM")
-  const imgCard = document.querySelector(`#fade3`)
+  const imgCard = document.querySelectorAll(`#fade3, #fade21, #fade23`)
   console.log(imgCard)
 })
 
