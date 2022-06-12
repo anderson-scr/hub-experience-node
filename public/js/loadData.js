@@ -1,23 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("/getAllCards")
-    .then(response => response.json())
-    .then(data => createCard(data))
-})
-
-function createCard(infoCard) {
-  console.log("oie de dentro do createCARD")
-  console.log(infoCard["data"])
-  for (let card of infoCard["data"]) {
-    const idBuscaPalestra = card["id_palestra"]
-    fetch("/getQntInscricao/" + idBuscaPalestra)
-      .then(response => response.json())
-      .then(data => {
-        card["qntInscrito"] = data["data"][0]["qnt_inscricao"]
-        new Cardi(card)
-      })  
-  }
-}
-
 class Cardi {
   constructor(infoCard) {
     this.infoCard = infoCard
@@ -42,7 +22,7 @@ class Cardi {
                       </figure>
                       <div class="fotoFade" id="fade${this.infoCard["id_palestra"]}"> </div>
 
-                      <img src="${infoCard["img_palestrante"]}" alt="Foto do palestrante" class="foto h${this.infoCard["id_palestra"]}">
+                      <img src="./${infoCard["img_palestrante"]}" alt="Foto do palestrante" class="foto h${this.infoCard["id_palestra"]}">
                     </div>
 
                     <div class="card-back">
@@ -56,7 +36,7 @@ class Cardi {
                         <p id="sala">Inscritos</p>
 
                         <div id="containnerSocialCard">
-                          <img src="/assets/Svgs/people.svg" alt="Icone vagas">
+                          <img src="./Assets/Svgs/people.svg" alt="Icone vagas">
                           <p id="vagas">${infoCard["qntInscrito"]}/${infoCard["limite_pessoa"]}</p>
                         </div>
                       </figure>
@@ -80,7 +60,12 @@ class Cardi {
                 </div>`
 
     
-    this.constroiCard()
+    if(this.infoCard["id_palestra"] !== 1) this.constroiCard()
+
+    if(this.infoCard["id_palestra"] == 3 || this.infoCard["id_palestra"] == 21 || this.infoCard["id_palestra"] == 23 ) {
+      this.fadeImage()
+      this.setImageBg()
+    }
   }
   // 3 21 23
 
@@ -93,5 +78,19 @@ class Cardi {
   constroiCard() {
     const containnerCardi = document.querySelector(".containnerDeCards") 
     containnerCardi.innerHTML += this.card
+  }
+
+  fadeImage() {
+    const imgCard = document.querySelector(`#fade${this.infoCard["id_palestra"]}`)
+
+    imgCard.style.animation = `fadeImage${this.infoCard["id_palestra"]} 7s infinite`
+  }
+
+  setImageBg() {
+    const img = document.querySelector(`#fade${this.infoCard["id_palestra"]}`)
+    const hide = document.querySelector(`.h${this.infoCard["id_palestra"]}`)
+    hide.style.display = "none";
+
+    img.classList.add(`img${this.infoCard["id_palestra"]}`)
   }
 }
