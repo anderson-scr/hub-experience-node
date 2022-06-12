@@ -1,8 +1,5 @@
 function openModal(evt) {
-  console.log(evt.target.className)
-  const idPalestrante = evt.target.className
-
-  fetch(`http://us-cdbr-east-05.cleardb.net:3306/getAll` + idPalestrante)
+  fetch(`/getPalestraModal/` + evt.target.className, { method: "GET" })
     .then(response => response.json())
     .then(data => createModal(data))
 }

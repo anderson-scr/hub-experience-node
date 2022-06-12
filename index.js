@@ -11,7 +11,7 @@ dotenv.config()
 
 
 // Configuracao
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
   // HandleBars
   app.engine('handlebars', handlebars.engine({defaulyLayout:'main'}))
@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 
 // Banco
 const pool = mysql.createPool({
-  connectionLimit:  200,
+  connectionLimit:  9,
   host:             process.env.HOST,
   user:             process.env.USER,
   password:         process.env.PASSWORD,
@@ -46,4 +46,26 @@ app.use('/', routes)
 const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
   console.log(`Server started on port localhost/${PORT}.`)
+})
+
+
+// Querys banco de dados
+app.get('/getPalestraModal/:idPalestrante', (request, response) => {
+  const { idPalestrante } = request.params
+
+  const resultado = new Promise((resolve, reject) => {
+    const pesquisa = "SELECT * FROM palestra WHERE id_palestra = ?"
+
+    pool.execute(pesquisa, [idPalestrante], (err, results) => {
+        // Retorna o erro com a query se der alguma coisa
+        if(err) reject(new Error(err.message))
+
+        resolve(results)
+      }
+    )      
+  })
+
+  resultado
+    .then(data => response.json({ data: data }))
+    .catch(erro => console.log(erro))
 })
