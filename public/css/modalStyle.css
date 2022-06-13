@@ -301,7 +301,7 @@ input[type='checkbox']:checked~ .checkbox{
   align-items: center;
   gap: 30px;
 }
-#containnerSocial > img {
+#containnerSocial > a, #imgSocial {
   width: 25px;
   cursor: pointer;
 }

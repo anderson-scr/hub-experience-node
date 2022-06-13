@@ -48,8 +48,12 @@ class Modal {
             <h2>${this.infoCard["nome_palestrante"]}</h2>
             <p>${this.infoCard["sub_info_palestrante"]}</p>
             <div id="containnerSocial">
-              <img src="/assets/Svgs/instagram.svg" alt="Icone instragram">
-              <img src="/assets/Svgs/linkedin.svg" alt="Icone Linkedin">
+              <a href="${this.infoCard["instagram_palestrante"]}" target="_blank">
+                <img src="/assets/Svgs/instagram.svg" alt="Icone instragram" id="imgSocial">
+              </a>
+              <a href="${this.infoCard["linkedin_palestrante"]}" target="_blank">
+                <img src="/assets/Svgs/linkedin.svg" alt="Icone Linkedin" id="imgSocial">
+              </a>
             </div>
             <img src="./${this.infoCard["img_palestrante"]}" class="imgModal h${this.infoCard["id_palestra"]}" alt="Foto palestrante">
             <div id="fade${this.infoCard["id_palestra"]}" class="imgModal${this.infoCard["id_palestra"]} fotoFadeModal${this.infoCard["id_palestra"]}"></div>
