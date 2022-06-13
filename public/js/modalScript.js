@@ -192,22 +192,19 @@ class Modal {
                               
                             <!-- cabeça do aviso -->
                             <div class="head_modal_aviso">
-                              <h1 class="atencao">!ATENÇÃ0!</h1>
+                              <h1 class="atencao">PARABENS!</h1>
                             </div>
 
                             <!-- corpo do aviso -->
                             <div class="body_modal_aviso">
-                              <p>Você já se inscreveu na palestra Nome da palestra.<br>Deseja alterar sua inscrição?</p>
+                              <p>Você se inscreveu na palestra<br><strong> ${this.infoCard["titulo_palestra"]}</strong>.<br>O evento acontecera dia 22/06 as 19hrs!<br>Te esperamos la!</p>
                             </div>
 
 
                             <!-- rodape do aviso/botoes -->
                             <div class="footer_modal_aviso">
-                              <div id="nao_div">
-                                <button class="btn_nao" id="nao" onclick="closeaviso('modal_aviso')">Não</button>
-                              </div>
                               <div id="sim_div">
-                                <button class="btn_sim" id="sim">Sim</button>                       
+                                <button class="btn_sim modalzinhoBtn" id="sim">Ok</button>                       
                               </div>
                             </div>
 
@@ -279,7 +276,16 @@ class Modal {
       }
   }
 
+  closeDoubleModal(containnerModalzinhoo) {
+    let modal = document.querySelector("#containnerModal");
 
+    document.querySelector(".modalzinhoBtn").addEventListener("click", () => {
+      containnerModalzinhoo.innerHTML = ''
+      modal.innerHTML = '';
+      document.querySelector("body").style.overflow = "visible"
+      window.location.reload();
+    })
+  }
 
   closeModal(evt) {
     evt.preventDefault()
@@ -388,7 +394,7 @@ class Modal {
 
       const containnerModalzinho = document.querySelector("#containnerModalUnico")
       containnerModalzinho.innerHTML = this.segundoModal
-      console.log(containnerModalzinho)
+      this.closeDoubleModal(containnerModalzinho)
 
     } else {
       console.log("Nao tenho cadastro")
@@ -405,9 +411,9 @@ class Modal {
       .then('', this.insereInscricao(todasRespostas["iptCpf"], todasRespostas["id_palestra"]))
 
 
-      this.trocarPalestra = `Voce esta cadastrado(a) em ${this.infoCard["titulo_palestra"]}.`
       const containnerModalzinho = document.querySelector("#containnerModalUnico")
       containnerModalzinho.innerHTML = this.segundoModal
+      this.closeDoubleModal(containnerModalzinho)
       }
   }
 

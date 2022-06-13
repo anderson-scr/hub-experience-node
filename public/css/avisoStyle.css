@@ -1,6 +1,6 @@
 /* fundo escuro */
 .modal_aviso{
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
     position: fixed;
     top: 0;
     left: 0;
@@ -13,13 +13,16 @@
 /* modal de aviso */
 .modal_content_aviso{
     background-color: #FCFCFC;
-    width: 500px;
+    width: 30%;
     height: auto;
-    margin: 0 auto;
-    margin-top: 2%;
-    padding: 0;
-    border-radius: 30px;
-    border: 2px solid grey;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 20px;
+    border: 3px solid var(--blue);
 }
 
 
@@ -27,7 +30,7 @@
 .head_modal_aviso{
     display: flex;
     justify-content: center;
-    color: red;
+    color: var(--main-bg-color);
 }
 .atencao{
     font-family: var(--textFont);
@@ -38,6 +41,7 @@
     display: flex;
     justify-content: center;
     font-family: var(--textFont);
+    text-align: center;
 }
 
 
@@ -72,8 +76,8 @@
 .btn_nao{
     height: 30px;
     width: 120px;
-    border: 3px solid red;
-    color: red;
+    border: 3px solid var(--orange);
+    color: var(--orange);
     font-weight: bold;
     position: relative;
     cursor: pointer;
@@ -101,7 +105,8 @@
     height: calc(100% + 27px);
 }
 .btn_nao:hover{
-    background-color: white;
+  color: var(--main-bg-color);
+  border-color: var(--main-bg-color);
 }
 
 
@@ -109,8 +114,8 @@
 .btn_sim{
     height: 30px;
     width: 120px;
-    border: 3px solid red;
-    color: red;
+    border: 3px solid var(--orange);
+    color: var(--orange);
     font-weight: bold;
     position: relative;
     cursor: pointer;
@@ -139,6 +144,6 @@
     height: calc(100% + 27px);
 }
 .btn_sim:hover{
-    background-color: red;
-    color: white;
+  color: var(--blue);
+  border-color: var(--blue);
 }
