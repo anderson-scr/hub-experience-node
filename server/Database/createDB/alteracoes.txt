@@ -16,9 +16,12 @@ UPDATE palestra set nome_palestrante = 'Daniel "Apollo" Giovani "Crasher"' where
 UPDATE palestra set nome_palestrante = 'Ana Valéria Sandra Demetrio' where id_palestra = 03;
 UPDATE palestra set nome_palestrante = 'Karoline Rodrigues Bianca Rodrigues' where id_palestra = 21;
 
+UPDATE palestra SET sub_info_palestrante = 'Coordenador Educacional no Senar' WHERE id_palestra = 14;
+
 UPDATE palestra SET titulo_palestra = 'Realidade Aumentada, Metaverso e Profissão do futuro' WHERE id_palestra = 27;
 UPDATE palestra SET titulo_palestra = 'Aprender jogando é mais legal' WHERE id_palestra = 16;
 UPDATE palestra SET titulo_palestra = 'O Mercado do metaverso: cases e possibilidades com a VRGlass' WHERE id_palestra = 1;
+UPDATE palestra SET titulo_palestra = 'História da propriedade intelectual' WHERE id_palestra = 25;
 
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa01.png" where id_palestra = 1;
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa02.png" where id_palestra = 2;
