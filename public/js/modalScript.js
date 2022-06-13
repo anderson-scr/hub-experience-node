@@ -30,7 +30,8 @@ class Modal {
               <img src="/assets/Svgs/instagram.svg" alt="Icone instragram">
               <img src="/assets/Svgs/linkedin.svg" alt="Icone Linkedin">
             </div>
-            <img src="./${this.infoCard["img_palestrante"]}" class="imgModal" alt="Foto palestrante">
+            <img src="./${this.infoCard["img_palestrante"]}" class="imgModal h${this.infoCard["id_palestra"]}" alt="Foto palestrante">
+            <div id="fade${this.infoCard["id_palestra"]}" class="imgModal fotoFadeModal"></div>
           </div>
   
           <div class="containnerInformacoes">
@@ -192,12 +193,12 @@ class Modal {
                               
                             <!-- cabeça do aviso -->
                             <div class="head_modal_aviso">
-                              <h1 class="atencao">PARABENS!</h1>
+                              <h1 class="atencao">PARABÉNS!</h1>
                             </div>
 
                             <!-- corpo do aviso -->
                             <div class="body_modal_aviso">
-                              <p>Você se inscreveu na palestra<br><strong> ${this.infoCard["titulo_palestra"]}</strong>.<br>O evento acontecera dia 22/06 as 19hrs!<br>Te esperamos la!</p>
+                              <p>Você se inscreveu na palestra<br><strong> ${this.infoCard["titulo_palestra"]}</strong>.<br>O evento acontecerá dia 22/06 as 19hrs!<br>Te esperamos lá!</p>
                             </div>
 
 
@@ -246,7 +247,7 @@ class Modal {
 
 
   mask(e, id, mask){
-    let tecla=(window.event)?event.keyCode:e.which;   
+    let tecla=(window.event)? e.keyCode:e.which;   
     if((tecla>47 && tecla<58)){
         this.mascara(id, mask);
         return true;
@@ -335,7 +336,7 @@ class Modal {
         letraCPF = true
       }
     }
-    if(respostas["iptCpf"] == '' || letraCPF || respostas["iptCpf"].length < 14 ) {
+    if(respostas["iptCpf"] == '' || letraCPF || respostas["iptCpf"].length < 11 ) {
       document.querySelector("#alertaPreencheriptCpf").style.visibility = "visible"
       return
     }
@@ -348,7 +349,7 @@ class Modal {
         letraNasc = true
       }
     }
-    if(respostas["iptNasc"] == '' || letraNasc || respostas["iptNasc"].length < 10 ) {
+    if(respostas["iptNasc"] == '' || letraNasc || respostas["iptNasc"].length < 8 ) {
       document.querySelector("#alertaPreencheriptNasc").style.visibility = "visible"
       return
     }
