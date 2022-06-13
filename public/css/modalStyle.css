@@ -414,10 +414,16 @@ input[type='checkbox']:checked~ .checkbox{
   font-weight: 800;
   visibility: hidden;
 }
-.fotoFadeModal {
+.fotoFadeModal3, .fotoFadeModal21, .fotoFadeModal23 {
   background-size:     cover; 
   background-repeat:   no-repeat;
   background-position: center center; 
   width: 50%;
   height: 350px;
+}
+.imgModal3, .imgModal21, .imgModal23 {
+  width: 60%;
+  border-radius: 15px;
+  border: 4px solid var(--main-bg-color);
+  box-shadow: 3px 4px 15px 3px rgba(0, 0, 0, 0.25);
 }

@@ -31,7 +31,7 @@ class Modal {
               <img src="/assets/Svgs/linkedin.svg" alt="Icone Linkedin">
             </div>
             <img src="./${this.infoCard["img_palestrante"]}" class="imgModal h${this.infoCard["id_palestra"]}" alt="Foto palestrante">
-            <div id="fade${this.infoCard["id_palestra"]}" class="imgModal fotoFadeModal"></div>
+            <div id="fade${this.infoCard["id_palestra"]}" class="imgModal${this.infoCard["id_palestra"]} fotoFadeModal${this.infoCard["id_palestra"]}"></div>
           </div>
   
           <div class="containnerInformacoes">
@@ -365,7 +365,7 @@ class Modal {
       return
     }
 
-    if (!document.querySelector("#check1").value) {
+    if (!document.querySelector("#check1").checked) {
       document.querySelector("#alertaPreencherCheck").style.visibility = "visible"
       return
     }
