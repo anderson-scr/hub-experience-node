@@ -392,6 +392,11 @@
 .camposFooter > legend {
   font-weight: 600;
 }
+
+.camposFooter > a{
+  color: transparent;
+}
+
 .legendaFooter {
   font-size: 14px;
 }
