@@ -80,11 +80,36 @@
   background-color: var(--blue);
   color: #fff;
 }
+.subTitulo {
+  text-align: center;
+}
 
 @media (max-width: 1550px){
   .svgCardzao {
     width: 50px;
     height: 50px;
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 1350px){
+  .svgCardzao {
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1050px){
+  #containnerImgLista {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+  }
+  .textoCardzao {
+    width: 120%;
+    margin-left: 20px;
+  }
+  #containnerListaCardizao {
+    width: 100%;
   }
 }
