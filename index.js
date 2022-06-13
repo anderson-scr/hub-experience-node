@@ -34,6 +34,7 @@ const pool = mysql.createPool({
   database:         process.env.DATABASE
 })
 
+
 pool.getConnection((err, connection) => {
   if(err) throw err; //Erro na conexcao
 
@@ -152,6 +153,28 @@ app.get('/getQntInscricoes/:idPalestra', (request, response) => {
     pool.execute(pesquisa, [idPalestra], (err, results) => {
         // Retorna o erro com a query se der alguma coisa
         if(err) reject(new Error(err.message))
+        resolve(results)
+      }
+    )      
+  })
+
+  resultado
+    .then(data => response.json({ data: data }))
+    .catch(erro => console.log(erro))
+})
+
+
+
+
+app.get("/qnt_inscritoGrande", (request, response) => {
+  
+  const resultado = new Promise((resolve, reject) => {
+    const pesquisa = `SELECT count(fk_palestra) as qnt_inscricao FROM inscricao WHERE fk_palestra = 1`
+
+    pool.execute(pesquisa, (err, results) => {
+        // Retorna o erro com a query se der alguma coisa
+        if(err) reject(new Error(err.message))
+        console.log(results)
         resolve(results)
       }
     )      

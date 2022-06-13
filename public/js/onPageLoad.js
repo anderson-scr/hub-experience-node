@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     texto2.style.opacity = "1"
     cubao.style.opacity = "1" 
  }, 500);
+
+ fetch("/qnt_inscritoGrande", {method: "GET"})
+  .then(result => result.json())
+  .then(data => {
+    console.log("oiiie")
+    console.log(data)
+    const vagas = document.querySelector(".vagaGrande")
+    vagas.textContent = `${data["data"][0]["qnt_inscricao"]}/150`
+  })
 })
 
 
