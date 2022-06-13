@@ -12,17 +12,41 @@ document.addEventListener("DOMContentLoaded", () => {
     cubao.style.opacity = "1" 
  }, 500);
 
- fetch("/qnt_inscritoGrande", {method: "GET"})
-  .then(result => result.json())
-  .then(data => {
-    console.log("oiiie")
-    console.log(data)
-    const vagas = document.querySelector(".vagaGrande")
-    vagas.textContent = `${data["data"][0]["qnt_inscricao"]}/150`
+  fetch("/qnt_inscritoGrande", {method: "GET"})
+   .then(result => result.json())
+   .then(data => {
+     console.log("oiiie")
+     console.log(data)
+     const vagas = document.querySelector(".vagaGrande")
+     vagas.textContent = `${data["data"][0]["qnt_inscricao"]}/150`
   })
+
+  if(iOS()) {
+    addClickOpenModal()
+  }
 })
 
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.userAgent)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
 
+function addClickOpenModal() {
+  const todosCards = document.querySelectorAll(".card-front")
+  todosCards.forEach(card, () => {
+    card.addEventListener("touchstart", () => {
+      openModal()
+    })
+  })
+}
 
 function menuScroll() {
   const botoes = document.querySelectorAll(".btnNav")

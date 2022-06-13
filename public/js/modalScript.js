@@ -1,13 +1,34 @@
-function openModal(evt) {
+function openModal(evt, ins = 2, total = 3) {
+  if(ins >= total) {
+    return alert("As vagas acabaram")
+  }
+
   fetch(`/getPalestraModal/` + evt.target.className, { method: "GET" })
     .then(response => response.json())
     .then(data => createModal(data))
 }
-
 function createModal(cardi) {
   new Modal(cardi["data"]["0"])
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  if(getMobileOperatingSystem()) {
+    const cardis = document.querySelectorAll(".card-front")
+    cardis.forEach(card => {
+      card.addEventListener("touchstart", evt => openModal(evt))
+    })
+  }
+})
+
+function getMobileOperatingSystem() {
+  let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return true;
+  }
+}
 
 class Modal {
   constructor(infoCard) {
