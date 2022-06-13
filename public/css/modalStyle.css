@@ -440,7 +440,7 @@ input[type='checkbox']:checked~ .checkbox{
   }
 }
 
-@media (max-width: 3690px){
+@media (max-width: 360px){
   #cancelar_div, #enviar_div {
     transform: scale(.6) !important;
   }
@@ -448,4 +448,14 @@ input[type='checkbox']:checked~ .checkbox{
     margin-left: 30px !important;
   }
 
+}
+
+@media (max-width: 450px){
+  .svgCardzao {
+    display: none;
+  }
+  .textoCardzao {
+    margin-left: 0 !important;
+    margin-right: 35px !important;
+  }
 }
