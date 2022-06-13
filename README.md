@@ -12,5 +12,5 @@
 
 4-Retorne para a pasta raiz do programa e execute o comando: "node index.js"
 
-# Por ultimo:
+# Por último:
 5- Basta entra em "localhost:3004/
