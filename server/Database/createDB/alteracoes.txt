@@ -14,9 +14,15 @@ UPDATE palestra set img_palestrante = "./Assets/Imgs/Palestrantes/pessoa28.png" 
 
 UPDATE palestra set nome_palestrante = 'Daniel "Apollo" Giovani "Crasher"' where id_palestra = 23;
 UPDATE palestra set nome_palestrante = 'Ana Valéria Sandra Demetrio' where id_palestra = 03;
+UPDATE palestra set nome_palestrante = 'Karoline Rodrigues Bianca Rodrigues' where id_palestra = 21;
 
+UPDATE palestra SET sub_info_palestrante = 'Coordenador Educacional no Senar' WHERE id_palestra = 14;
+UPDATE palestra SET sub_info_palestrante = 'Designer - Jera' WHERE id_palestra = 19;
 
-
+UPDATE palestra SET titulo_palestra = 'Realidade Aumentada, Metaverso e Profissão do futuro' WHERE id_palestra = 27;
+UPDATE palestra SET titulo_palestra = 'Aprender jogando é mais legal' WHERE id_palestra = 16;
+UPDATE palestra SET titulo_palestra = 'O Mercado do metaverso: cases e possibilidades com a VRGlass' WHERE id_palestra = 1;
+UPDATE palestra SET titulo_palestra = 'História da propriedade intelectual' WHERE id_palestra = 25;
 
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa01.png" where id_palestra = 1;
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa02.png" where id_palestra = 2;
@@ -45,3 +51,38 @@ UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa24.png" w
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa25.png" where id_palestra = 25;
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa26.png" where id_palestra = 26;
 UPDATE palestra set img_palestrante = "/assets/Imgs/Palestrantes/pessoa27.png" where id_palestra = 27;
+
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 1;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 2;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 3;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 5;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 6;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 7;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 8;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 9;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 11;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 12;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 14;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 17;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 18;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 20;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 21;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 23;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 24;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 26;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 27;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/in/antoniodauzaker' WHERE id_palestra = 4;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/' WHERE id_palestra = 16;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/in/maria-aparecida-de-lima' WHERE id_palestra = 15;
+UPDATE palestra SET linkedin_palestrante = 'https://www.linkedin.com/in/camila-amato-montalbano' WHERE id_palestra = 10;
+
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/juliodinizhc/' WHERE id_palestra = 26;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/rodrigoclosina?igshid=YmMyMT' WHERE id_palestra = 1;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/jullio.salles?igshid=YmMyMTA' WHERE id_palestra = 2;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 7;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 12;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 14;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 19;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/anaelisanaveira?igshid=YmMyM' WHERE id_palestra = 20;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 23;
+UPDATE palestra SET instagram_palestrante = 'https://www.instagram.com/senachubacademy?igshid=YmMyM' WHERE id_palestra = 24;

@@ -329,6 +329,26 @@
   background-color: #f7f7f7;
 }
 
+#apoiador17 > img{
+  transform: scale(.9);
+}
+
+#apoiador18 > img{
+  transform: scale(.2);
+}
+
+#apoiador18{
+  background-color: #f7f7f7;
+}
+
+#apoiador19 > img{
+  transform: scale(.2);
+}
+
+#apoiador19{
+  background-color: #f7f7f7;
+}
+
 .apoiador {
   display: flex;
   justify-content: center;
@@ -392,6 +412,11 @@
 .camposFooter > legend {
   font-weight: 600;
 }
+
+.camposFooter > a{
+  color: transparent;
+}
+
 .legendaFooter {
   font-size: 14px;
 }
