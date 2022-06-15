@@ -237,6 +237,12 @@
   width: 90%;
   margin: auto;
 }
+.apoiador {
+  min-width: 120px !important;
+  max-width: 120px !important;
+  min-height: 120px !important;
+  max-height: 120px !important;
+}
 #apoiadores {
   margin: auto;
   margin-top: 8%;
@@ -361,8 +367,6 @@
   transform: scale(.17);
 }
 .apoiador {
-  min-width: 115px;
-  max-width: 115px;
   height: 115px;
   border: 3px solid var(--main-bg-color);
   border-radius: 50%;
@@ -372,6 +376,9 @@
 .apoiador:hover {
   transform: scale(1.2);
   border-color: var(--ligth-orange);
+}
+.logo16 {
+  transform: scale(.85);
 }
 
 .wMini {
@@ -385,6 +392,14 @@
 }
 .wGrande {
   width: 83%;
+}
+@media (max-width: 550px) {
+  .wMedia {
+    flex-wrap: wrap;
+  }
+  .wGrande {
+    flex-wrap: wrap;
+  }
 }
 /* Esfera */
 /* Sessao dos Apoiadores (CIMA) */
@@ -1127,7 +1142,10 @@
     margin-bottom: 0;
   }
   .apoiador {
-    min-width: 80px !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+    min-height: 100px !important;
+    max-height: 100px !important;
   }
   #containnerLetrasSVG {
     margin-right: 160px !important;
@@ -1162,6 +1180,33 @@
   }
   #containnerTeste {
     overflow: hidden;
+  }
+  #apoiador05 > img {
+    transform: scale(.4);
+  }
+  #apoiador06 > img {
+    transform: scale(.8);
+  }
+  #apoiador07 > img, #apoiador08 > img {
+    transform: scale(.2);
+  }
+  #apoiador09 > img {
+    transform: scale(.8);
+  }
+  #apoiador10 > img {
+    transform: scale(.4);
+  }
+  #apoiador12 > img {
+    transform: scale(.85);
+  }
+  #apoiador14 > img {
+    transform: scale(.9);
+  }
+  #apoiador15 > img {
+    transform: scale(.4);
+  }
+  #apoiador19 > img {
+    transform: scale(.14);
   }
 }
 /* Imgs organizadores */
