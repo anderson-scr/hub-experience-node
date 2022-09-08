@@ -6,10 +6,10 @@ let instance = null
 dotenv.config()
 
 const connection = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
+  host: 'jbb8y3dri1ywovy2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: 'br6voiedx35dogde',
+  password: 'vtp8haquvsoc461l',
+  database: 'zbazdrpvxqq9qf6j',
 })
 
 // ssl : {
